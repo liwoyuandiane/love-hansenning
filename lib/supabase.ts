@@ -133,6 +133,18 @@ export const api = {
     return data
   },
 
+  async updateWishlistItem(id: string, updates: Partial<Wishlist>) {
+    const { data, error } = await supabase
+      .from('wishlist')
+      .update(updates)
+      .eq('id', id)
+      .select()
+      .single()
+    
+    if (error) throw error
+    return data
+  },
+
   async deleteWishlistItem(id: string) {
     const { error } = await supabase
       .from('wishlist')
