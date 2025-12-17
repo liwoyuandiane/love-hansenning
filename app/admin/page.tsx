@@ -3,11 +3,12 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import { User } from '@supabase/supabase-js'
 import AdminDashboard from '@/components/AdminDashboard'
 import LoginForm from '@/components/LoginForm'
 
 export default function AdminPage() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
 
