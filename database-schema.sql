@@ -39,6 +39,7 @@ CREATE TABLE explore_locations (
     title VARCHAR(200) NOT NULL,
     description TEXT,
     location_coords JSONB,
+    visit_date DATE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );

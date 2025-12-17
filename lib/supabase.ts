@@ -40,6 +40,7 @@ export interface ExploreLocation {
   title: string
   description?: string
   location_coords?: any
+  visit_date?: string
   created_at: string
   updated_at: string
 }
